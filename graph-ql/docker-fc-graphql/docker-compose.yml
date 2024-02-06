@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  graphql:
+    container_name: graphql-go
+    build: .
+    tty: true
+    command: go run server.go
+    volumes:
+      - ..:/usr/src/app
+    ports:
+      - 8080:8080
