@@ -4,7 +4,7 @@ services:
     container_name: graphql-go
     build: .
     tty: true
-    command: go run server.go
+    command: bash -c "bash"
     volumes:
       - ..:/usr/src/app
     ports:

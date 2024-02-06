@@ -22,4 +22,4 @@ go.work
 
 # Other directories/files
 .bash_history
-/.cache
+.cache
