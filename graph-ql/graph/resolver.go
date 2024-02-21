@@ -1,6 +1,6 @@
 package graph
 
-import "github.com/rezendelc/full-cycle-examples/graph-ql/internal/database/category.go"
+import "graph-ql/internal/database"
 
 // This file will not be regenerated automatically.
 //

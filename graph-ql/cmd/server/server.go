@@ -5,10 +5,13 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"database/sql"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	_ "github.com/mattn/go-sqlite3"
+	
+	"graph-ql/internal/database"
 )
 
 const defaultPort = "8080"
