@@ -2,10 +2,12 @@ version: '3.8'
 services:
   graphql:
     container_name: graphql-go
-    build: .
+    image: golang
     tty: true
-    command: bash -c "bash"
+    command: bash -c "go run cmd/server/server.go"
+    # command: bash
+    working_dir: /usr/src
     volumes:
-      - ..:/usr/src/app
+      - ..:/usr/src
     ports:
       - 8080:8080
