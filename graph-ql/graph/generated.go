@@ -2950,7 +2950,7 @@ func (ec *executionContext) unmarshalInputNewCourse(ctx context.Context, obj int
 		asMap[k] = v
 	}
 
-	fieldsInOrder := [...]string{"name", "description"}
+	fieldsInOrder := [...]string{"name", "description", "categoryId"}
 	for _, k := range fieldsInOrder {
 		v, ok := asMap[k]
 		if !ok {
@@ -2971,6 +2971,13 @@ func (ec *executionContext) unmarshalInputNewCourse(ctx context.Context, obj int
 				return it, err
 			}
 			it.Description = data
+		case "categoryId":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("categoryId"))
+			data, err := ec.unmarshalNID2string(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.CategoryID = data
 		}
 	}
 
