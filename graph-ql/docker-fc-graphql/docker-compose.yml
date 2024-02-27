@@ -4,8 +4,7 @@ services:
     container_name: graphql-go
     image: golang
     tty: true
-    command: bash -c "go mod tidy && go run cmd/server/server.go"
-    # command: bash
+    command: bash -c "go run cmd/server/server.go"
     working_dir: /usr/local/go/src/graph-ql
     volumes:
       - ../:/usr/local/go/src/graph-ql
